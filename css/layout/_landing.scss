@@ -1,0 +1,240 @@
+@use "../util/" as u;
+
+.landing {
+  background: var(--dark-bgColor);
+  color: #fff;
+  user-select: none;
+
+  .container {
+    height: 100vh;
+  }
+
+  nav {
+    @include u.d-flex(space-between, center);
+    position: relative;
+    height: u.rem(70);
+  }
+}
+
+.landing .logo a {
+  color: var(--main-color);
+  padding: u.rem(5) 0;
+  font-size: u.rem(32);
+  transition: color var(--short-duration);
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(36);
+  }
+
+  &:hover {
+    color: var(--dark-color);
+  }
+}
+
+.landing .links {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  top: 180%;
+  pointer-events: none;
+  flex-direction: column;
+
+  @include u.breakpoint(medium) {
+    position: initial;
+    opacity: 1;
+    pointer-events: unset;
+    flex-direction: row;
+  }
+
+  a {
+    padding: u.rem(19) u.rem(24);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--light-color);
+    position: relative;
+    transition: var(--main-duration);
+    @include u.breakpoint(medium) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: var(--main-color);
+    }
+
+    &::before {
+      content: "";
+      bottom: u.rem(10);
+      @include u.transform-center(50%);
+      width: 6px;
+      height: 0;
+      background-color: var(--main-color);
+      -wekbit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      transition: height var(--main-duration);
+    }
+
+    &:hover::before {
+      height: 6px;
+    }
+  }
+
+  &.opened {
+    opacity: 1;
+    width: 100%;
+    top: 100%;
+    pointer-events: initial;
+    transition: var(--main-duration);
+    background-color: #fff;
+
+    a {
+      padding: u.rem(20);
+      color: #333;
+
+      &::before {
+        content: unset;
+      }
+
+      &:hover {
+        padding: u.rem(20) u.rem(28);
+        color: var(--main-color);
+      }
+    }
+  }
+  .resume {
+    color: var(--main-color);
+  }
+}
+
+.landing .toggle-menu {
+  display: block;
+  width: u.rem(22);
+  height: u.rem(18);
+  @include u.transform-center(0, 50%);
+  cursor: pointer;
+  right: u.rem(12);
+  @include u.breakpoint(medium) {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    background-color: var(--light-color);
+    width: 100%;
+    height: u.rem(2);
+    transition: var(--short-duration);
+  }
+
+  &:hover .mid {
+    width: 100%;
+  }
+
+  .top {
+    top: 0;
+  }
+
+  .mid {
+    top: u.rem(8);
+    right: 0;
+    width: 60%;
+  }
+
+  .bot {
+    top: u.rem(16);
+  }
+
+  &.opened {
+    .top,
+    .bot {
+      top: u.rem(8);
+      background-color: rgb(255, 24, 24);
+    }
+
+    .top {
+      transform: rotate(45deg);
+    }
+
+    .mid {
+      opacity: 0;
+    }
+
+    .bot {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.landing .hero {
+  height: calc(100% - u.rem(70));
+  display: flex;
+  overflow: hidden;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.landing .text {
+  padding-top: u.rem(20);
+  @include u.breakpoint(medium) {
+    align-self: center;
+  }
+
+  .greet {
+    font-size: 14px;
+    @include u.breakpoint(small) {
+      font-size: 16px;
+    }
+    @include u.breakpoint(medium) {
+      font-size: 18px;
+    }
+  }
+
+  .job-title {
+    font-size: u.rem(28);
+    color: var(--main-color);
+    margin: 0.625rem 0;
+
+    @include u.breakpoint(small) {
+      font-size: u.rem(40);
+    }
+
+    @include u.breakpoint(large) {
+      font-size: u.rem(52);
+    }
+  }
+
+  p {
+    font-size: 14px;
+    @include u.breakpoint(small) {
+      font-size: 16px;
+    }
+    @include u.breakpoint(medium) {
+      font-size: 18px;
+    }
+    .high-speed {
+      color: var(--main-color);
+    }
+  }
+}
+
+.landing .image {
+  @include u.transform-center(50%);
+  bottom: u.rem(-10);
+
+  @include u.breakpoint(medium) {
+    @include u.transform-center(0);
+    left: auto;
+    right: 0;
+  }
+
+  img {
+    max-width: u.rem(230);
+
+    @include u.breakpoint(medium) {
+      max-width: u.rem(350);
+    }
+    @include u.breakpoint(large) {
+      max-width: u.rem(400);
+    }
+  }
+}

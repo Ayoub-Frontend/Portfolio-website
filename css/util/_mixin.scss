@@ -1,0 +1,24 @@
+@mixin d-flex($main: flex-start, $cross: stretch) {
+  & {
+    display: flex;
+    @if ($main != flex-start) {
+      justify-content: $main;
+    }
+    @if ($cross != stretch) {
+      align-items: $cross;
+    }
+  }
+}
+
+@mixin transform-center($x, $y: 0) {
+  & {
+    position: absolute;
+    transform: translate(-$x, -$y);
+    @if ($x != 0) {
+      left: $x;
+    }
+    @if ($y != 0) {
+      top: $y;
+    } 
+  }
+}

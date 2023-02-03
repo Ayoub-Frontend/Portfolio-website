@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="dev ayb portfolio website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayoub Dev</title>
+    <link rel="icon" href="./imgs/icon_1.png" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="landing">
+      <div class="container">
+        <nav>
+          <h2 class="logo">
+            <a href="index.html" aria-label="Go back to home page">
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </h2>
+          <ul class="links" id="links">
+            <a href="#portfolio" aria-label="Go to portfolio section">
+              portfolio
+            </a>
+            <a href="#skills" aria-label="Go to skills section">skills</a>
+            <a href="#services" aria-label="Go to services">services</a>
+            <a href="#contact" aria-label="Go to contact section">contact</a>
+            <a
+              href="../resume.pdf"
+              aria-label="Download my resume"
+              class="resume"
+            >
+              resume
+            </a>
+          </ul>
+          <span class="toggle-menu" id="toggleMenu">
+            <span class="top"></span>
+            <span class="mid"></span>
+            <span class="bot"></span>
+          </span>
+        </nav>
+        <div class="hero">
+          <div class="text">
+            <span class="greet">Hi, i'm ayoub</span>
+            <h2 class="job-title">front-end developer</h2>
+            <p>
+              I create high performance websites
+              <!-- <i class="fa-solid fa-gauge-simple-high high-speed"></i> -->
+            </p>
+            <a
+              href="#portfolio"
+              class="special-btn"
+              aria-label="Go to portfolio section"
+            >
+              view my work
+            </a>
+            <div class="social">
+              <a
+                href="https://www.facebook.com/profile.php?id=100085270735685"
+                target="_blank"
+                aria-label="Go to Facebook profile"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com/Ayuob_Al3raqi"
+                target="_blank"
+                aria-label="Go to Twitter profile"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ayoub-jasim-1151831b9/"
+                target="_blank"
+                aria-label="Go to Linkedin profile"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/ayoub99a"
+                target="_blank"
+                aria-label="Go to GitHub profile"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="image">
+            <img src="./imgs/landing.webp" alt="Landing" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio cards" id="portfolio">
+      <h2 class="main-heading">
+        <a href="#portfolio" aria-label="Go to portfolio section">portfolio</a>
+      </h2>
+      <div class="container">
+        <div class="card">
+          <a href="#" target="_blank" aria-label="Go To Design 1 Live website">
+            <img src="imgs/website_01.webp" alt="Ecommerce Website" />
+          </a>
+          <div class="info">
+            <h4>interactive Ecommerce Website</h4>
+            <div class="icons">
+              <a
+                href="https://github.com/ayoub99a/CRUDS-By-JS"
+                target="_blank"
+                aria-label="Go To Design 1 Repo"
+              >
+                <i class="fa-brands fa-github small-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card disabled">
+          <i class="fa-solid fa-lock lock"></i>
+          <a href="#" target="_blank" aria-label="Website_02"> </a>
+          <div class="info">
+            <h4></h4>
+            <div class="icons">
+              <a href="#" target="_blank" aria-label="Go to React project"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="card disabled">
+          <i class="fa-solid fa-lock lock"></i>
+          <a href="#" target="_blank" aria-label="Go To Design 3 Repo"> </a>
+          <div class="info">
+            <h4></h4>
+            <div class="icons">
+              <a href="#" target="_blank" aria-label="Go To Design 3 Repo"> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2 class="main-heading">
+        <a href="#skills">skills</a>
+      </h2>
+      <div class="container">
+        <div class="skills-group">
+          <h3>main languages</h3>
+          <div class="images-container">
+            <div class="image">
+              <img src="./imgs/html.jpg" alt="HTML" title="HTML" />
+            </div>
+            <div class="image">
+              <img src="./imgs/css.jpg" alt="CSS" title="CSS" />
+            </div>
+            <div class="image">
+              <img
+                src="./imgs/js_new_2.png"
+                alt="JavaScript"
+                title="JavaScript"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>libraries & webkits:</h3>
+          <div class="images-container">
+            <div class="image">
+              <img
+                src="./imgs/bootstrap.jpg"
+                alt="Bootstrap"
+                title="Bootstrap"
+              />
+            </div>
+            <div class="image">
+              <img src="./imgs/scss.webp" alt="SASS" title="SASS" />
+            </div>
+            <div class="image">
+              <img src="./imgs/react.png" alt="React JS" title="React JS" />
+            </div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>tools:</h3>
+          <div class="images-container">
+            <div class="image">
+              <img src="./imgs/git.jpg" alt="Git" title="Git" />
+            </div>
+            <div class="image">
+              <img src="./imgs/github.jpg" alt="github" title="github" />
+            </div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>soft skills:</h3>
+          <h4>languages:</h4>
+          <ul>
+            <li>arabic(native)</li>
+            <li>english(intermadate)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services cards" id="services" data-section="services">
+      <h2 class="main-heading">
+        <a href="#services" aria-label="Go To Services Section"> services </a>
+      </h2>
+      <div class="container">
+        <div class="card">
+          <i class="fa-solid fa-lightbulb main-icon"></i>
+          <h3>create from scratch</h3>
+          <p>
+            Use your design on PSD or Figma to build a new website from scratch.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-code main-icon"></i>
+          <h3>watch progress</h3>
+          <p>
+            Thanks to GitHub. you will watch the edits on your website step by
+            step.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-mountain-sun main-icon"></i>
+          <h3>responsive design</h3>
+          <p>
+            Make sure that your website works awesome & looks beautiful in
+            different screens.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-js main-icon"></i>
+          <h3>interactive website</h3>
+          <p>
+            Using JavaScript & React, I can make the websites interactive and
+            cool.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-broom main-icon"></i>
+          <h3>clean & reusable code</h3>
+          <p>Write human readable code for easy edits and debugging.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-arrows-spin main-icon"></i>
+          <h3>reusable components</h3>
+          <p>
+            Reusable code to minimize the website size as possible (for high
+            performance)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact cards" id="contact">
+      <h2 class="main-heading">
+        <a href="#contact">contact</a>
+      </h2>
+      <div class="container">
+        <div class="channel">
+          <a href="mailto:ayoub1999118@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope channel-icon"></i>
+          </a>
+          <h3>email</h3>
+          <p>admin@dev-ayoub.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <p>all right reserved for <span>Ayoub Jasim</span></p>
+      <div class="social">
+        <a
+          href="https://www.facebook.com/profile.php?id=100085270735685"
+          target="_blank"
+          aria-label="Go to Facebook Profile"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://twitter.com/Ayuob_Al3raqi"
+          target="_blank"
+          aria-label="Go to Twitter Profile"
+        >
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ayoub-jasim-1151831b9/"
+          target="_blank"
+          aria-label="Go to Linkedin Profile"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/ayoub99a"
+          target="_blank"
+          aria-label="Go to GitHub Profile"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </footer>
+
+    <i class="fa-solid fa-arrow-up scrollToTop" id="scrollToTop"></i>
+    <script src="js/main.js"></script>
+  </body>
+</html>

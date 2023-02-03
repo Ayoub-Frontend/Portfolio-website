@@ -1,0 +1,46 @@
+@use "../util/" as u;
+
+.contact {
+  background-color: var(--light-bgColor);
+
+  .container {
+    @include u.d-flex(center, center);
+    flex-wrap: wrap;
+  }
+
+  .channel {
+    min-width: u.rem(290);
+    max-width: u.rem(350);
+    flex: 1;
+    padding: u.rem(32) u.rem(16);
+    text-align: center;
+    border-radius: u.rem(10);
+    box-shadow: 0 0 u.rem(20) #ddd;
+    transition: var(--main-duration);
+
+    &:hover {
+      box-shadow: 0 0 u.rem(20) #aaa;
+      transform: scale(1.05);
+    }
+  }
+
+  .channel-icon {
+    font-size: u.rem(60);
+    color: var(--main-color);
+    transition: var(--main-duration);
+
+    &:hover {
+      color: var(--dark-color);
+    }
+  }
+
+  h3 {
+    font-size: u.rem(22);
+    margin: u.rem(16) 0;
+    text-transform: capitalize;
+  }
+
+  p {
+    font-weight: bold;
+  }
+}

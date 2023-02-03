@@ -1,0 +1,91 @@
+@use "../util/" as u;
+
+.skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--light-bgColor);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(u.rem(320), 1fr));
+    gap: u.rem(30);
+    position: relative;
+  }
+  .skills-group {
+    text-transform: capitalize;
+    background-color: hsl(0, 0%, 98%);
+    padding: u.rem(10) u.rem(20);
+    border-radius: u.rem(15);
+    position: relative;
+
+    .images-container {
+      display: flex;
+      align-items: center;
+      gap: u.rem(20);
+
+      .image img {
+        width: 60px;
+        border-radius: 50%;
+        
+        @include u.breakpoint(large) {
+          width: 75px;
+        }
+      }
+    }
+
+    h3 {
+      font-size: u.rem(22);
+      margin: 10px 0;
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin: 5px 0;
+      }
+
+      .progress {
+        width: 95%;
+        height: 30px;
+        align-items: center;
+        background-color: #ccc;
+        margin-bottom: 10px;
+
+        span {
+          display: block;
+          height: 100%;
+          line-height: 30px;
+          background-color: var(--main-color);
+          text-align: right;
+          padding-right: 5px;
+          color: #fff;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes change-img {
+  0%,
+  100% {
+    background-image: url(../imgs/skill_01.webp);
+  }
+  50% {
+    background-image: url(../imgs/skill_02.webp);
+  }
+}
+
+// @keyframes scale-up {
+//   0%,
+//   100% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.02);
+//   }
+// }

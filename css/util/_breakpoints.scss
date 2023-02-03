@@ -1,0 +1,17 @@
+/// Landscape Mobile(Small Screens) 576px^
+/// Medium Screen                   768px^
+/// Large Screen                    992px^
+/// Xlarge Screen                   1200px^
+
+$breakpoints-up: (
+  "small": 36em,
+  "medium": 48em,
+  "large": 62em,
+  "xlarge": 75em,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

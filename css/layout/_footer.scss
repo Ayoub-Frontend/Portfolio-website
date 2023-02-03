@@ -1,0 +1,24 @@
+@use "../util/" as u;
+
+.main-footer {
+  padding: u.rem(16);
+  background-color: var(--dark-bgColor);
+  color: var(--light-color);
+  gap: u.rem(15) u.rem(50);
+  @include u.d-flex(center, center);
+  flex-wrap: wrap;
+
+  p {
+    text-transform: capitalize;
+    text-align: center;
+
+    span {
+      color: hsl(207, 90%, 90%);
+      font-weight: 600;
+    }
+  }
+
+  .social {
+    margin: 0;
+  }
+}
