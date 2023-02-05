@@ -24,18 +24,18 @@
       gap: u.rem(20);
 
       .image img {
-        width: 60px;
+        width: u.rem(60);
         border-radius: 50%;
         
         @include u.breakpoint(large) {
-          width: 75px;
+          width: u.rem(75);
         }
       }
     }
 
     h3 {
       font-size: u.rem(22);
-      margin: 10px 0;
+      margin: u.rem(10) 0;
     }
 
     .skill {
@@ -43,7 +43,7 @@
       flex-direction: column;
 
       h4 {
-        font-size: 1.4rem;
+        font-size: u.rem(23);
         font-weight: 500;
         margin: 5px 0;
       }

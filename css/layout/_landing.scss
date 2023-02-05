@@ -173,46 +173,85 @@
   position: relative;
 }
 
-.landing .text {
+.landing .info {
   padding-top: u.rem(20);
+  margin-right: auto;
+  margin-left: auto;
+
   @include u.breakpoint(medium) {
     align-self: center;
+    margin: unset;
+  }
+
+  .input-cursor {
+    display: block;
+    width: u.rem(2);
+    height: u.rem(18);
+    background-color: var(--light-color);
+    opacity: 0;
+    animation: blink 0.4s linear 1s 4;
+    margin-left: u.rem(4);
+    @keyframes blink {
+      0%,
+      40% {
+        opacity: 0;
+      }
+
+      60%,
+      100% {
+        opacity: 1;
+      }
+    }
   }
 
   .greet {
-    font-size: 14px;
-    @include u.breakpoint(small) {
-      font-size: 16px;
-    }
-    @include u.breakpoint(medium) {
-      font-size: 18px;
+    width: fit-content;
+    @include u.d-flex(center, center);
+
+    .text {
+      font-size: u.rem(14);
+      @include u.breakpoint(medium) {
+        font-size: u.rem(16);
+      }
+      @include u.breakpoint(large) {
+        font-size: u.rem(18);
+      }
     }
   }
 
   .job-title {
     font-size: u.rem(28);
-    color: var(--main-color);
+    // color: var(--main-color);
     margin: 0.625rem 0;
+    -webkit-text-stroke: u.rem(0.5) var(--light-color);
+    color: transparent;
+    transition: color var(--main-duration);
 
     @include u.breakpoint(small) {
       font-size: u.rem(40);
+      -webkit-text-stroke: u.rem(1) var(--light-color);
     }
 
     @include u.breakpoint(large) {
-      font-size: u.rem(52);
+      font-size: u.rem(56);
     }
   }
 
-  p {
-    font-size: 14px;
+  .my-job {
+    @include u.d-flex(center, center);
+    width: fit-content;
+    height: u.rem(28);
+    font-size: u.rem(14);
     @include u.breakpoint(small) {
-      font-size: 16px;
+      font-size: u.rem(16);
     }
     @include u.breakpoint(medium) {
-      font-size: 18px;
+      font-size: u.rem(18);
     }
-    .high-speed {
-      color: var(--main-color);
+
+    .input-cursor {
+      animation: blink 0.4s 4s linear 5;
+      opacity: 0
     }
   }
 }
@@ -228,7 +267,9 @@
   }
 
   img {
-    max-width: u.rem(230);
+    // max-width: u.rem(210);
+    // max-width: clamp(u.rem(200), u.rem(200) + 7vw, u.rem(230));
+    max-width: calc(170px + 8vh);
 
     @include u.breakpoint(medium) {
       max-width: u.rem(350);

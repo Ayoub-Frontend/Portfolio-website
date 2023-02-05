@@ -1,18 +1,31 @@
-// Creator div
+function autoTyping(target, text) {
+  let i = 0;
+  let theInterval = setInterval(() => {
+    target.innerHTML += text[i];
+    i++;
+    if (i === text.length) {
+      clearInterval(theInterval);
+    }
+  }, 60);
+}
 
-// let theCreatorDiv = document.getElementById("creator");
+// Auto type my name.
+setTimeout(function () {
+  let theGreetText = document.querySelector(".greet .text");
+  autoTyping(theGreetText, "Hi, I'm Ayoub");
+}, 1000);
 
-// window.addEventListener("load", function () {
-//   if (this.scrollY === 0) {
-//     theCreatorDiv.classList.remove("hidden");
-//     this.document.body.style.overflowY = "hidden";
-//   }
-// });
+// Fill the Job title Text with main color.
+setTimeout(function () {
+  document.querySelector(".job-title").style.color = "var(--main-color)";
+}, 2000);
 
-// setTimeout(() => {
-//   theCreatorDiv.classList.add("hidden");
-//   document.body.style.overflowY = "visible";
-// }, 3000);
+// Auto type the Job Description Text
+setTimeout(function () {
+  let myJob = document.querySelector(".info .my-job .text");
+  console.log(myJob);
+  autoTyping(myJob, "I create high performance websites");
+}, 3000);
 
 // Toggle Menu
 let toggleIcon = document.getElementById("toggleMenu");
