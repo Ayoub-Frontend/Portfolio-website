@@ -4,7 +4,7 @@
 
 .main-heading {
   width: fit-content;
-  margin: 0 auto u.rem(70);
+  margin: 0 0 u.rem(70);
   padding: u.rem(6) u.rem(8);
   font-size: u.rem(28);
   text-transform: capitalize;
@@ -16,32 +16,53 @@
     font-size: u.rem(32);
   }
 
+  @include u.breakpoint(xlarge) {
+    font-size: u.rem(36);
+  }
+
   a {
     color: #000;
+    opacity: 0;
   }
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: u.rem(12);
-    height: u.rem(12);
-    background-color: hsl(207, 90%, 90%);
-    z-index: -1;
+    @include u.transform-center(u.rem(2), 50%);
+    width: u.rem(2);
+    height: 60%;
+    background-color: hsl(207, 90%, 80%);
     transition: var(--main-duration);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
   }
 
-  &:hover::before {
-    height: 100%;
-    width: 100%;
-    -webkit-border-radius: 0%;
-    -moz-border-radius: 0%;
-    border-radius: 0%;
+  &.active {
+    a {
+      animation: appear-heading 0.5s 1s forwards;
+    }
+    &::before {
+      animation: active-heading 1s forwards;
+    }
+  }
+
+  @keyframes appear-heading {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes active-heading {
+    0% {
+      left: u.rem(2);
+      width: u.rem(2);
+    }
+    50% {
+      left: u.rem(2);
+      width: 100%;
+    }
+    100% {
+      left: 100%;
+      width: 0;
+    }
   }
 }
 
@@ -100,12 +121,13 @@
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 
-  .container {
+  .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(u.rem(300), 1fr));
     gap: u.rem(40);
     overflow: hidden;
     padding: u.rem(20) u.rem(25);
+    justify-content: center;
   }
 
   .card {

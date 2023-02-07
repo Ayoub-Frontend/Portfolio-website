@@ -3,15 +3,10 @@
 .contact {
   background-color: var(--light-bgColor);
 
-  .container {
-    @include u.d-flex(center, center);
-    flex-wrap: wrap;
-  }
-
   .channel {
     min-width: u.rem(290);
     max-width: u.rem(350);
-    flex: 1;
+    margin: auto;
     padding: u.rem(32) u.rem(16);
     text-align: center;
     border-radius: u.rem(10);

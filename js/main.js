@@ -38,20 +38,30 @@ toggleIcon.addEventListener("click", function () {
 // Appear Cards in Services & Portfolio Sections
 let servicesSection = document.querySelector(".services");
 let servicesCards = document.querySelectorAll(".services .card");
+
 let portfolioSection = document.querySelector(".portfolio");
 let portfolioCards = document.querySelectorAll(".portfolio .card");
+
 let skillsSection = document.querySelector(".skills");
 let skillsGroup = document.querySelectorAll(".skills .skills-group");
 
+let contactSection = document.querySelector(".contact");
+
 window.addEventListener("scroll", function () {
   if (this.scrollY > portfolioSection.offsetTop - 350) {
+    appearHeading(portfolioSection);
     appearCards(portfolioCards);
   }
   if (this.scrollY > skillsSection.offsetTop - 350) {
     appearCards(skillsGroup);
+    appearHeading(skillsSection);
   }
   if (this.scrollY > servicesSection.offsetTop - 350) {
     appearCards(servicesCards);
+    appearHeading(servicesSection);
+  }
+  if (this.scrollY > contactSection.offsetTop - 350) {
+    appearHeading(contactSection);
   }
 });
 
@@ -66,6 +76,11 @@ function appearCards(cards) {
       // console.log("FUU")
     }
   });
+}
+
+function appearHeading(section) {
+  let theMainHeading = section.querySelector(".main-heading");
+  theMainHeading.classList.add("active");
 }
 
 // Scroll to top Button

@@ -5,7 +5,7 @@
   padding-bottom: var(--section-padding);
   background-color: var(--light-bgColor);
 
-  .container {
+  .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(u.rem(320), 1fr));
     gap: u.rem(30);
