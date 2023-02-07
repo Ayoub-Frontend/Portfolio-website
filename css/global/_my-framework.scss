@@ -55,7 +55,7 @@
   margin: u.rem(16) 0;
   text-transform: capitalize;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: u.rem(1);
   animation: fade-in 0.6s 4.6s ease-out both;
   transition: var(--main-duration);
   &:hover {
@@ -102,7 +102,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(u.rem(300), 1fr));
     gap: u.rem(40);
     overflow: hidden;
     padding: u.rem(20) u.rem(25);
@@ -114,21 +114,20 @@
     top: 40%;
     opacity: 0;
     transition: 0.7s;
-    cursor: pointer;
     background-color: #fff;
     text-align: center;
     -webkit-border-radius: u.rem(10);
     -moz-border-radius: u.rem(10);
     border-radius: u.rem(10);
-    -webkit-box-shadow: 0 0 u.rem(20) #ddd;
-    -moz-box-shadow: 0 0 u.rem(20) #ddd;
-    box-shadow: 0 0 u.rem(20) #ddd;
+    border-width: u.rem(3);
+    border-color: #eee;
+    border-style: solid;
 
     &:not(.disabled):hover {
-      transform: scale(1.06);
-      -webkit-box-shadow: 0 0 u.rem(20) #aaa;
-      -moz-box-shadow: 0 0 u.rem(20) #aaa;
-      box-shadow: 0 0 u.rem(20) #aaa;
+      transform: scale(1.08);
+
+      box-shadow: 0 0 0 transparent;
+      border-color: var(--main-color);
     }
 
     .main-icon {
