@@ -13,19 +13,19 @@ function autoTyping(target, text) {
 setTimeout(function () {
   let theGreetText = document.querySelector(".greet .text");
   autoTyping(theGreetText, "Hi, I'm Ayoub");
-}, 1000);
+}, 300);
 
 // Fill the Job title Text with main color.
 setTimeout(function () {
   document.querySelector(".job-title").style.color = "var(--main-color)";
-}, 2000);
+}, 1300);
 
 // Auto type the Job Description Text
 setTimeout(function () {
   let myJob = document.querySelector(".info .my-job .text");
   console.log(myJob);
   autoTyping(myJob, "I create high performance websites");
-}, 3000);
+}, 2300);
 
 // Toggle Menu
 let toggleIcon = document.getElementById("toggleMenu");
