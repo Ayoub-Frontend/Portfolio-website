@@ -4,15 +4,15 @@
 
 .main-heading {
   width: fit-content;
-  margin: 0 0 u.rem(70);
+  margin: 0 0 u.rem(20);
   padding: u.rem(6) u.rem(8);
-  font-size: u.rem(28);
+  font-size: u.rem(30);
   text-transform: capitalize;
   position: relative;
   transition: var(--main-duration);
   z-index: 2;
 
-  @include u.breakpoint(large) {
+  @include u.breakpoint(medium) {
     font-size: u.rem(32);
   }
 
@@ -29,7 +29,7 @@
     content: "";
     position: absolute;
     @include u.transform-center(u.rem(2), 50%);
-    width: u.rem(2);
+    width: 0;
     height: 60%;
     background-color: hsl(207, 90%, 80%);
     transition: var(--main-duration);
@@ -126,7 +126,7 @@
     grid-template-columns: repeat(auto-fill, minmax(u.rem(300), 1fr));
     gap: u.rem(40);
     overflow: hidden;
-    padding: u.rem(20) u.rem(25);
+    padding: u.rem(20) u.rem(15);
     justify-content: center;
   }
 
@@ -146,9 +146,7 @@
     border-style: solid;
 
     &:not(.disabled):hover {
-      transform: scale(1.08);
-
-      box-shadow: 0 0 0 transparent;
+      transform: scale(1.03);
       border-color: var(--main-color);
     }
 
