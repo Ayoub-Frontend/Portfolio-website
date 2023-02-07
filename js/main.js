@@ -23,7 +23,6 @@ setTimeout(function () {
 // Auto type the Job Description Text
 setTimeout(function () {
   let myJob = document.querySelector(".info .my-job .text");
-  console.log(myJob);
   autoTyping(myJob, "I create high performance websites");
 }, 2300);
 
@@ -38,32 +37,35 @@ toggleIcon.addEventListener("click", function () {
 
 // Appear Cards in Services & Portfolio Sections
 let servicesSection = document.querySelector(".services");
+let servicesCards = document.querySelectorAll(".services .card");
 let portfolioSection = document.querySelector(".portfolio");
+let portfolioCards = document.querySelectorAll(".portfolio .card");
+let skillsSection = document.querySelector(".skills");
+let skillsGroup = document.querySelectorAll(".skills .skills-group");
 
 window.addEventListener("scroll", function () {
-  if (this.scrollY > servicesSection.offsetTop - 150) {
-    appearCards("services");
-    if (this.scrollY > portfolioSection.offsetTop) {
-      // let servicesLink = document.querySelector("#links a");
-      // console.log(servicesLink.href);
-    }
+  if (this.scrollY > portfolioSection.offsetTop - 350) {
+    appearCards(portfolioCards);
   }
-  if (this.scrollY > portfolioSection.offsetTop - 150) {
-    appearCards("portfolio");
+  if (this.scrollY > skillsSection.offsetTop - 350) {
+    appearCards(skillsGroup);
+  }
+  if (this.scrollY > servicesSection.offsetTop - 350) {
+    appearCards(servicesCards);
   }
 });
 
-function appearCards(section) {
-  let theTargetCards = document.querySelectorAll(`.${section} .card`);
-  if (section === "services") {
-    theTargetCards.forEach((card) => {
+function appearCards(cards) {
+  cards.forEach((card) => {
+    if (card.classList.contains("lt")) {
+      card.style.cssText = `opacity: 1; left: 0;`;
+    } else if (card.classList.contains("rt")) {
+      card.style.cssText = `opacity: 1; right: 0;`;
+    } else {
       card.style.cssText = `opacity: 1; top: 0`;
-    });
-  } else {
-    theTargetCards.forEach((card) => {
-      card.style.cssText = `opacity: 1; left: 0`;
-    });
-  }
+      // console.log("FUU")
+    }
+  });
 }
 
 // Scroll to top Button

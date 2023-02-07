@@ -1,13 +1,23 @@
-.portfolio {
+@use "../util/" as u;
 
+.portfolio {
   &.cards {
     .card {
       padding: 0;
-      top: 0;
-      left: 50%;
+      top: 100%;
+      left: 0;
       overflow: hidden;
       position: relative;
-      min-height: 100px;
+      min-height: u.rem(100);
+      background-color: var(--light-color);
+
+      &:first-of-type {
+        cursor: unset;
+        &::before,
+        &::after {
+          content: unset;
+        }
+      }
 
       &:not(.disabled):hover::before {
         height: 100%;
@@ -39,12 +49,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: #000;
-        font-size: 24px;
+        font-size: u.rem(24);
         font-weight: bold;
       }
 
       &.disabled {
         background-color: #ccc;
+        cursor: not-allowed;
       }
 
       .lock {
@@ -53,7 +64,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: #000;
-        font-size: 40px;
+        font-size: u.rem(24);
       }
     }
 
@@ -65,11 +76,11 @@
 
       h4 {
         text-transform: capitalize;
-        font-size: 18px;
+        font-size: u.rem(18);
       }
 
       .small-icon {
-        font-size: 26px;
+        font-size: u.rem(26);
         color: var(--para-color);
         transition: var(--main-duration);
 

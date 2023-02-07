@@ -10,82 +10,69 @@
     grid-template-columns: repeat(auto-fit, minmax(u.rem(320), 1fr));
     gap: u.rem(30);
     position: relative;
+    overflow: hidden;
   }
   .skills-group {
-    text-transform: capitalize;
+    // max-width: u.rem(500);
     background-color: hsl(0, 0%, 98%);
-    padding: u.rem(10) u.rem(20);
+    border: 1px solid #aaa;
+    padding: u.rem(20);
     border-radius: u.rem(15);
     position: relative;
+    opacity: 0;
+    transition: 0.7s;
+
+    &.lt {
+      left: -100%;
+    }
+
+    &.rt {
+      right: -100%;
+    }
 
     .images-container {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      margin-bottom: u.rem(15);
       gap: u.rem(20);
 
       .image img {
         width: u.rem(60);
         border-radius: 50%;
-        
+
         @include u.breakpoint(large) {
-          width: u.rem(75);
+          width: u.rem(85);
         }
       }
     }
 
     h3 {
-      font-size: u.rem(22);
-      margin: u.rem(10) 0;
+      font-size: u.rem(26);
+      margin-bottom: u.rem(15);
     }
 
-    .skill {
-      display: flex;
-      flex-direction: column;
+    h4 {
+      font-size: u.rem(18);
+      font-weight: 600;
+      margin-bottom: u.rem(10);
+    }
+    ul li {
+      font-weight: 500;
+      font-size: u.rem(18);
+      margin: u.rem(10) 0 0 u.rem(20);
+      position: relative;
 
-      h4 {
-        font-size: u.rem(23);
-        font-weight: 500;
-        margin: 5px 0;
-      }
-
-      .progress {
-        width: 95%;
-        height: 30px;
-        align-items: center;
-        background-color: #ccc;
-        margin-bottom: 10px;
-
-        span {
-          display: block;
-          height: 100%;
-          line-height: 30px;
-          background-color: var(--main-color);
-          text-align: right;
-          padding-right: 5px;
-          color: #fff;
-          font-size: 18px;
-        }
+      &::before {
+        content: "\f058";
+        position: absolute;
+        font-family: "Font Awesome 6 Free";
+        font-weight: bold;
+        left: u.rem(-25);
+        @include u.transform-center(0, 50%);
+        font-size: u.rem(18);
+        color: var(--dark-color);
       }
     }
   }
 }
-
-@keyframes change-img {
-  0%,
-  100% {
-    background-image: url(../imgs/skill_01.webp);
-  }
-  50% {
-    background-image: url(../imgs/skill_02.webp);
-  }
-}
-
-// @keyframes scale-up {
-//   0%,
-//   100% {
-//     transform: scale(1);
-//   }
-//   50% {
-//     transform: scale(1.02);
-//   }
-// }
