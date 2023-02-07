@@ -189,7 +189,7 @@
     height: u.rem(18);
     background-color: var(--light-color);
     opacity: 0;
-    animation: blink 0.4s linear 1s 4;
+    animation: blink 0.5s linear 0.1s 4;
     margin-left: u.rem(4);
     @keyframes blink {
       0%,
@@ -250,7 +250,7 @@
     }
 
     .input-cursor {
-      animation: blink 0.4s 4s linear 5;
+      animation: blink 0.5s 2.3s linear 5;
       opacity: 0
     }
   }
