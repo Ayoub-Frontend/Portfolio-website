@@ -51,7 +51,7 @@
     padding: u.rem(19) u.rem(24);
     text-transform: capitalize;
     font-weight: 500;
-    color: var(--light-color);
+    color: var(--offwhite-color);
     position: relative;
     transition: var(--main-duration);
     @include u.breakpoint(medium) {
@@ -120,7 +120,7 @@
 
   span {
     position: absolute;
-    background-color: var(--light-color);
+    background-color: var(--offwhite-color);
     width: 100%;
     height: u.rem(2);
     transition: var(--short-duration);
@@ -187,7 +187,7 @@
     display: block;
     width: u.rem(2);
     height: u.rem(18);
-    background-color: var(--light-color);
+    background-color: var(--offwhite-color);
     opacity: 0;
     animation: blink 0.5s 0.1s 4 linear;
     margin-left: u.rem(4);
@@ -223,13 +223,13 @@
     font-size: u.rem(28);
     // color: var(--main-color);
     margin: 0.625rem 0;
-    -webkit-text-stroke: u.rem(0.5) var(--light-color);
+    -webkit-text-stroke: u.rem(0.5) var(--offwhite-color);
     color: transparent;
     transition: color var(--main-duration);
 
     @include u.breakpoint(small) {
       font-size: u.rem(40);
-      -webkit-text-stroke: u.rem(1) var(--light-color);
+      -webkit-text-stroke: u.rem(1) var(--offwhite-color);
     }
 
     @include u.breakpoint(large) {

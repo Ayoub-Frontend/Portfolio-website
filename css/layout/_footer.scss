@@ -3,7 +3,7 @@
 .main-footer {
   padding: u.rem(16);
   background-color: var(--dark-bgColor);
-  color: var(--light-color);
+  color: var(--offwhite-color);
   gap: u.rem(15) u.rem(50);
   @include u.d-flex(center, center);
   flex-wrap: wrap;
