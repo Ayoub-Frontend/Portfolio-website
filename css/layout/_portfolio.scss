@@ -1,6 +1,7 @@
 @use "../util/" as u;
 
 .portfolio {
+  background-color: var(--portfolio-color);
   &.cards {
     .card {
       padding: 0;
@@ -9,7 +10,6 @@
       overflow: hidden;
       position: relative;
       min-height: u.rem(100);
-      background-color: var(--offwhite-color);
 
       &:first-of-type {
         cursor: unset;
@@ -39,7 +39,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.3);
         height: 0%;
       }
 
@@ -54,7 +54,7 @@
       }
 
       &.disabled {
-        background-color: #ccc;
+        background-color: var(--text-color-2);
         cursor: not-allowed;
       }
 
@@ -63,8 +63,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #000;
-        font-size: u.rem(24);
+        color: var(--text-color-1);
+        font-size: u.rem(28);
       }
     }
 
@@ -81,11 +81,11 @@
 
       .small-icon {
         font-size: u.rem(26);
-        color: var(--para-color);
+        color: var(--text-color-1);
         transition: var(--main-duration);
 
         &:hover {
-          color: #000;
+          opacity: 0.6;
         }
       }
     }

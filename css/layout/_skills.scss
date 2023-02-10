@@ -3,8 +3,7 @@
 .skills {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--offwhite-color);
-
+  background-color: var(--landing-color);
   .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(u.rem(320), 1fr));
@@ -13,8 +12,9 @@
     overflow: hidden;
   }
   .skills-group {
-    // max-width: u.rem(500);
-    background-color: hsl(0, 0%, 98%);
+    max-width: u.rem(500);
+    background-color: var(--portfolio-color);
+    color: var(--text-color-1);
     border: 1px solid #aaa;
     padding: u.rem(20);
     border-radius: u.rem(15);
@@ -71,7 +71,7 @@
         left: u.rem(-25);
         @include u.transform-center(0, 50%);
         font-size: u.rem(18);
-        color: var(--dark-color);
+        color: var(--secondary-theme-color);
       }
     }
   }

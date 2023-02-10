@@ -1,8 +1,8 @@
 @use "../util/" as u;
 
 .landing {
-  background: var(--dark-bgColor);
-  color: #fff;
+  background-color: var(--landing-color);
+  color: var(--text-color-1);
   user-select: none;
 
   .container {
@@ -10,14 +10,15 @@
   }
 
   nav {
-    @include u.d-flex(space-between, center);
+    display: flex;
+    align-items: center;
     position: relative;
     height: u.rem(70);
   }
 }
 
 .landing .logo a {
-  color: var(--main-color);
+  color: var(--primary-theme-color);
   padding: u.rem(5) 0;
   font-size: u.rem(32);
   transition: color var(--short-duration);
@@ -27,14 +28,16 @@
   }
 
   &:hover {
-    color: var(--dark-color);
+    color: var(--secondary-theme-color);
   }
 }
 
 .landing .links {
+  flex: 1;
   display: flex;
+  justify-content: center;
   position: absolute;
-  z-index: 10;
+  z-index: 3;
   opacity: 0;
   top: 180%;
   pointer-events: none;
@@ -51,15 +54,15 @@
     padding: u.rem(19) u.rem(24);
     text-transform: capitalize;
     font-weight: 500;
-    color: var(--offwhite-color);
+    color: var(--text-color-1);
     position: relative;
-    transition: var(--main-duration);
+    transition: var(--short-duration);
     @include u.breakpoint(medium) {
       font-size: 18px;
     }
 
     &:hover {
-      color: var(--main-color);
+      color: var(--primary-theme-color);
     }
 
     &::before {
@@ -68,7 +71,7 @@
       @include u.transform-center(50%);
       width: 6px;
       height: 0;
-      background-color: var(--main-color);
+      background-color: var(--primary-theme-color);
       -wekbit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
@@ -86,11 +89,11 @@
     top: 100%;
     pointer-events: initial;
     transition: var(--main-duration);
-    background-color: #fff;
+    background-color: var(--text-color-1);
 
     a {
       padding: u.rem(20);
-      color: #333;
+      color: var(--text-color-2);
 
       &::before {
         content: unset;
@@ -98,12 +101,88 @@
 
       &:hover {
         padding: u.rem(20) u.rem(28);
-        color: var(--main-color);
+        color: var(--primary-theme-color);
       }
     }
   }
   .resume {
-    color: var(--main-color);
+    color: var(--primary-theme-color);
+  }
+}
+
+.landing .dark-light-btn {
+  position: absolute;
+  height: 100%;
+  @include u.transform-center(0, 50%);
+  z-index: 4;
+  right: u.rem(76);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include u.breakpoint(medium) {
+    right: u.rem(12);
+  }
+
+  .icon {
+    position: relative;
+    width: u.rem(20);
+    height: u.rem(20);
+    background-color: var(--text-color-1);
+    border-radius: 50%;
+    border: 2px solid var(--landing-color);
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: var(--landing-color);
+      border-radius: 50%;
+      position: absolute;
+      top: -100%;
+      right: -100%;
+      transition: var(--main-duration);
+    }
+
+    &.night::before {
+      top: -20%;
+      right: -20%;
+      background-color: var(--landing-color);
+    }
+
+    div {
+      height: u.rem(1);
+      background-color: var(--text-color-1);
+      position: absolute;
+      z-index: -1;
+      @include u.transform-center(50%, 50%);
+      transition: width var(--main-duration);
+
+      &.line-1,
+      &.line-2 {
+        width: u.rem(30);
+      }
+
+      &.line-2 {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &.line-3,
+      &.line-4 {
+        width: u.rem(28);
+      }
+
+      &.line-3 {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &.line-4 {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    &.night div {
+      width: 0;
+    }
   }
 }
 
@@ -120,7 +199,7 @@
 
   span {
     position: absolute;
-    background-color: var(--offwhite-color);
+    background-color: var(--text-color-1);
     width: 100%;
     height: u.rem(2);
     transition: var(--short-duration);
@@ -187,7 +266,7 @@
     display: block;
     width: u.rem(2);
     height: u.rem(18);
-    background-color: var(--offwhite-color);
+    background-color: var(--text-color-1);
     opacity: 0;
     animation: blink 0.5s 0.1s 4 linear;
     margin-left: u.rem(4);
@@ -221,15 +300,15 @@
 
   .job-title {
     font-size: u.rem(28);
-    // color: var(--main-color);
+    // color: var(--primary-theme-color);
     margin: 0.625rem 0;
-    -webkit-text-stroke: u.rem(0.5) var(--offwhite-color);
+    -webkit-text-stroke: u.rem(0.5) var(--text-color-1);
     color: transparent;
     transition: color var(--main-duration);
 
     @include u.breakpoint(small) {
       font-size: u.rem(40);
-      -webkit-text-stroke: u.rem(1) var(--offwhite-color);
+      -webkit-text-stroke: u.rem(1) var(--text-color-1);
     }
 
     @include u.breakpoint(large) {
@@ -255,7 +334,7 @@
     }
   }
   .social {
-  animation: fade-in 0.6s 5.2s ease-out both;
+    animation: fade-in 0.6s 5.2s ease-out both;
   }
 }
 

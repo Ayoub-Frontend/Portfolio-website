@@ -15,9 +15,10 @@ setTimeout(function () {
   autoTyping(theGreetText, "Hi, I'm Ayoub");
 }, 300);
 
-// Fill the Job title Text with main color.
+// Fill the Job title Text with primary-theme-color.
 setTimeout(function () {
-  document.querySelector(".job-title").style.color = "var(--main-color)";
+  document.querySelector(".job-title").style.color =
+    "var(--primary-theme-color)";
 }, 1300);
 
 // Auto type the Job Description Text
@@ -98,4 +99,36 @@ window.addEventListener("scroll", function () {
 // The Functionality
 scrollBtn.addEventListener("click", function () {
   window.scrollTo(0, 0);
+});
+
+// Get the Previous Mode from localStorage
+let theFavMode = window.localStorage.getItem("mode");
+
+let darkModeBtn = document.querySelector(".dark-light-btn");
+let darkModeIcon = document.querySelector(".dark-light-btn .icon");
+
+if (theFavMode) {
+  if (theFavMode === "night") {
+    // console.log("NIGHT");
+    document.body.classList.add("dark-mode");
+    darkModeIcon.classList.remove("night");
+  } else {
+    darkModeIcon.classList.add("night");
+    // console.log("DAY");
+    document.body.classList.remove("dark-mode");
+  }
+}
+
+darkModeBtn.addEventListener("click", () => {
+  // Turn on / off the Dark MODE
+  document.body.classList.toggle("dark-mode");
+  // Change ICON shape.
+  darkModeIcon.classList.toggle("night");
+
+  // Save in LocalStorage
+  if (darkModeIcon.classList.contains("night")) {
+    window.localStorage.setItem("mode", "day");
+  } else {
+    window.localStorage.setItem("mode", "night");
+  }
 });

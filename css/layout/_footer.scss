@@ -2,8 +2,8 @@
 
 .main-footer {
   padding: u.rem(16);
-  background-color: var(--dark-bgColor);
-  color: var(--offwhite-color);
+  background-color: var(--portfolio-color);
+  color: var(--text-color-1);
   gap: u.rem(15) u.rem(50);
   @include u.d-flex(center, center);
   flex-wrap: wrap;
@@ -13,7 +13,7 @@
     text-align: center;
 
     span {
-      color: hsl(207, 90%, 90%);
+      color: var(--primary-theme-color);
       font-weight: 600;
     }
   }
