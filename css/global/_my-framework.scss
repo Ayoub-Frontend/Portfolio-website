@@ -1,6 +1,4 @@
-// To Join us, You need to follow these rules
-// 1. Use Multiple times.
-@use "../util/" as u;
+@use "../util" as u;
 
 .main-heading {
   width: fit-content;
@@ -71,7 +69,7 @@
   padding: u.rem(10) u.rem(16);
   color: #fff;
   border-radius: u.rem(10);
-  margin: u.rem(16) 0;
+  margin: u.rem(8) 0;
   text-transform: capitalize;
   font-weight: 500;
   letter-spacing: u.rem(1);
@@ -82,6 +80,7 @@
   }
   @include u.breakpoint(medium) {
     padding: u.rem(14) u.rem(25);
+    margin: u.rem(16) 0;
   }
 }
 
@@ -100,7 +99,11 @@
 
 .social {
   display: flex;
-  margin: u.rem(16) 0;
+  margin: u.rem(8) 0;
+
+  @include u.breakpoint(medium) {
+    margin: u.rem(16) 0;
+  }
 
   a {
     display: block;
@@ -165,5 +168,28 @@
     p {
       line-height: 1.6;
     }
+  }
+}
+
+.scrollToTop {
+  background-color: var(--primary-theme-color);
+  padding: u.rem(8) u.rem(12);
+  color: #fff;
+  position: fixed;
+  bottom: u.rem(30);
+  right: u.rem(25);
+  font-size: u.rem(22);
+  border-radius: u.rem(8);
+  cursor: default;
+  opacity: 0;
+  transition: var(--main-duration);
+
+  &.visible {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--secondary-theme-color);
   }
 }

@@ -55,6 +55,10 @@ html::-webkit-scrollbar-thumb:active {
 
 body {
   font-family: "Poppins", sans-serif;
+
+  &.arabic {
+    direction: rtl;
+  }
 }
 
 ul {
@@ -91,28 +95,5 @@ img {
 
   @include u.breakpoint(xlarge) {
     width: map-get(u.$breakpoints-up, xlarge) - 1.875em;
-  }
-}
-
-.scrollToTop {
-  background-color: var(--primary-theme-color);
-  padding: u.rem(8) u.rem(12);
-  color: #fff;
-  position: fixed;
-  bottom: u.rem(30);
-  right: u.rem(25);
-  font-size: u.rem(22);
-  border-radius: u.rem(8);
-  cursor: default;
-  opacity: 0;
-  transition: var(--main-duration);
-
-  &.appear {
-    opacity: 1;
-    cursor: pointer;
-  }
-
-  &:hover {
-    background-color: var(--secondary-theme-color);
   }
 }

@@ -8,14 +8,14 @@
   @include u.d-flex(center, center);
   flex-wrap: wrap;
 
-  p {
-    text-transform: capitalize;
+  span {
     text-align: center;
+    text-transform: capitalize;
+  }
 
-    span {
-      color: var(--primary-theme-color);
-      font-weight: 600;
-    }
+  .copyright-owner {
+    color: var(--primary-theme-color);
+    font-weight: 600;
   }
 
   .social {

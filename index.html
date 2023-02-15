@@ -29,16 +29,36 @@
             </a>
           </h2>
           <ul class="links" id="links">
-            <a href="#portfolio" aria-label="Go to portfolio section">
+            <a
+              href="#portfolio"
+              aria-label="Go to portfolio section"
+              data-transKey="portfolio"
+            >
               portfolio
             </a>
-            <a href="#skills" aria-label="Go to skills section">skills</a>
-            <a href="#services" aria-label="Go to services">services</a>
-            <a href="#contact" aria-label="Go to contact section">contact</a>
+            <a
+              href="#skills"
+              aria-label="Go to skills section"
+              data-transKey="skills"
+              >skills</a
+            >
+            <a
+              href="#services"
+              aria-label="Go to services"
+              data-transKey="services"
+              >services</a
+            >
+            <a
+              href="#contact"
+              aria-label="Go to contact section"
+              data-transKey="contact"
+              >contact</a
+            >
             <a
               href="../resume.pdf"
               aria-label="Download my resume"
               class="resume"
+              data-transKey="resume"
               >resume
             </a>
           </ul>
@@ -50,7 +70,9 @@
               <div class="line-4"></div>
             </div>
           </div>
-
+          <div class="languages-btn">
+            <i class="fa-solid fa-language button-icon" data-lang="en" id = "languagesBtn"></i>
+          </div>
           <span class="toggle-menu" id="toggleMenu">
             <span class="top"></span>
             <span class="mid"></span>
@@ -63,7 +85,9 @@
               <span class="text"></span>
               <span class="input-cursor"></span>
             </p>
-            <h2 class="job-title">front-end developer</h2>
+            <h2 class="job-title" data-transKey="jobTitle">
+              front-end developer
+            </h2>
             <p class="my-job">
               <span class="text"></span>
               <span class="input-cursor"></span>
@@ -72,6 +96,7 @@
               href="#portfolio"
               class="special-btn"
               aria-label="Go to portfolio section"
+              data-transKey="viewMyWork"
             >
               view my work
             </a>
@@ -116,7 +141,10 @@
     <section class="portfolio cards" id="portfolio">
       <div class="container">
         <h2 class="main-heading">
-          <a href="#portfolio" aria-label="Go to portfolio section"
+          <a
+            href="#portfolio"
+            aria-label="Go to portfolio section"
+            data-transKey="portfolioHead"
             >portfolio</a
           >
         </h2>
@@ -124,7 +152,7 @@
           <div class="card">
             <img src="imgs/dev.webp" alt="Portfolio Website" />
             <div class="info">
-              <h4>portfolio website</h4>
+              <h4 data-transKey="myWebsite">portfolio website</h4>
               <a
                 href="https://github.com/Ayoub-Frontend/Portfolio-website"
                 target="_blank"
@@ -143,7 +171,7 @@
               <img src="imgs/Eco.webp" alt="Ecommerce website" />
             </a>
             <div class="info">
-              <h4>ecommerce website</h4>
+              <h4 data-transKey="ecoWebsite">ecommerce website</h4>
               <a
                 href="https://github.com/Ayoub-Frontend/E-Commerce-website"
                 target="_blank"
@@ -171,12 +199,12 @@
     <section class="skills" id="skills">
       <div class="container">
         <h2 class="main-heading">
-          <a href="#skills">skills</a>
+          <a href="#skills" data-transKey="skillsHead">skills</a>
         </h2>
         <div class="skills-container">
           <div class="skills-group lt">
-            <h3>Hard skills</h3>
-            <h4>Main languages</h4>
+            <h3 data-transKey="hardSkills">Hard skills</h3>
+            <h4 data-transKey="mainLanguages">Main languages</h4>
             <div class="images-container">
               <div class="image">
                 <img src="./imgs/html.jpg" alt="HTML" title="HTML" />
@@ -192,7 +220,7 @@
                 />
               </div>
             </div>
-            <h4>Libraries</h4>
+            <h4 data-transKey="libraries">Libraries</h4>
             <div class="images-container">
               <div class="image">
                 <img
@@ -205,7 +233,7 @@
                 <img src="./imgs/react.png" alt="React JS" title="React JS" />
               </div>
             </div>
-            <h4>Tools</h4>
+            <h4 data-transKey="tools">Tools</h4>
             <div class="images-container">
               <div class="image">
                 <img src="./imgs/scss.webp" alt="SASS" title="SASS" />
@@ -219,15 +247,19 @@
             </div>
           </div>
           <div class="skills-group rt">
-            <h3>Soft skills</h3>
+            <h3 data-transKey="">Soft skills</h3>
             <ul>
-              <li>Problem-solving</li>
-              <li>Self-learning</li>
-              <li>Time management</li>
-              <li>Communication skills</li>
-              <li>Keen attention in details</li>
-              <li>Passion for learning new technologies</li>
-              <li>Multi language speaker(Arabic, English)</li>
+              <li data-transKey="problemSolving">Problem-solving</li>
+              <li data-transKey="selfLearning">Self-learning</li>
+              <li data-transKey="timeManagement">Time management</li>
+              <li data-transKey="communication">Communication skills</li>
+              <li data-transKey="attention">Keen attention in details</li>
+              <li data-transKey="passion">
+                Passion for learning new technologies
+              </li>
+              <li data-transKey="multiLanguage">
+                Multi language speaker(Arabic, English)
+              </li>
             </ul>
           </div>
         </div>
@@ -237,52 +269,60 @@
     <section class="services cards" id="services" data-section="services">
       <div class="container">
         <h2 class="main-heading">
-          <a href="#services" aria-label="Go To Services Section"> services </a>
+          <a
+            href="#services"
+            aria-label="Go To Services Section"
+            data-transKey="servicesHead"
+          >
+            services
+          </a>
         </h2>
         <div class="cards-container">
           <div class="card">
             <i class="fa-solid fa-lightbulb main-icon"></i>
-            <h3>create from scratch</h3>
-            <p>
+            <h3 data-transKey="createFromScratch">create from scratch</h3>
+            <p data-transKey="createFromScratchP">
               Use your design on PSD or Figma to build a new website from
               scratch.
             </p>
           </div>
           <div class="card">
             <i class="fa-solid fa-code main-icon"></i>
-            <h3>watch progress</h3>
-            <p>
+            <h3 data-transKey="trackProgress">track progress</h3>
+            <p data-transKey="trackProgressP">
               Thanks to GitHub. you will watch the edits on your website step by
               step.
             </p>
           </div>
           <div class="card">
             <i class="fa-solid fa-mountain-sun main-icon"></i>
-            <h3>responsive design</h3>
-            <p>
+            <h3 data-transKey="responsiveDesign">responsive design</h3>
+            <p data-transKey="responsiveDesignP">
               Make sure that your website works awesome & looks beautiful in
               different screens.
             </p>
           </div>
           <div class="card">
             <i class="fa-brands fa-js main-icon"></i>
-            <h3>interactive website</h3>
-            <p>
+            <h3 data-transKey="interactiveWebsite">interactive website</h3>
+            <p data-transKey="interactiveWebsiteP">
               Using JavaScript & React, I can make the websites interactive and
               cool.
             </p>
           </div>
           <div class="card">
             <i class="fa-solid fa-broom main-icon"></i>
-            <h3>clean & reusable code</h3>
-            <p>Write human readable code for easy edits and debugging.</p>
+            <h3 data-transKey="cleanReusableCode">clean & reusable code</h3>
+            <p data-transKey="cleanReusableCodeP">
+              Write human readable code for easy edits and debugging.
+            </p>
           </div>
           <div class="card">
             <i class="fa-solid fa-arrows-spin main-icon"></i>
-            <h3>reusable components</h3>
-            <p>
+            <h3 data-transKey="reusableComponents">reusable components</h3>
+            <p data-transKey="reusableComponentsP">
               Reusable code to minimize the website size as possible (for high
-              performance)
+              performance).
             </p>
           </div>
         </div>
@@ -292,20 +332,25 @@
     <section class="contact cards" id="contact">
       <div class="container">
         <h2 class="main-heading">
-          <a href="#contact">contact</a>
+          <a href="#contact" data-transKey="contactHead">contact</a>
         </h2>
         <div class="channel">
           <a href="mailto:admin@dev-ayoub.com" aria-label="Email">
             <i class="fa-solid fa-envelope channel-icon"></i>
           </a>
-          <h3>email</h3>
+          <h3 data-transKey="email">email</h3>
           <p>admin@dev-ayoub.com</p>
         </div>
       </div>
     </section>
 
     <footer class="main-footer">
-      <p>all right reserved for <span>Ayoub Jasim</span></p>
+      <div>
+        <span data-transKey="copyright">all right reserved for</span>
+        <span class="copyright-owner" data-transKey="copyrightOwner"
+          >Ayoub Jasim</span
+        >
+      </div>
       <div class="social">
         <a
           href="https://www.facebook.com/profile.php?id=100085270735685"

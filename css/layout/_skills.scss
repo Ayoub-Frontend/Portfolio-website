@@ -22,12 +22,24 @@
     opacity: 0;
     transition: 0.7s;
 
+    // Skills Group 1
     &.lt {
       left: -100%;
+
+      &.visible {
+        opacity: 1;
+        left: 0;
+      }
     }
 
+    // Skills Group 2
     &.rt {
       right: -100%;
+
+      &.visible {
+        opacity: 1;
+        right: 0;
+      }
     }
 
     .images-container {
