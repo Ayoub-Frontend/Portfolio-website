@@ -21,18 +21,19 @@
   }
 }
 
-.landing .logo a {
-  color: var(--primary-theme-color);
-  padding: u.rem(5) 0;
-  font-size: u.rem(32);
-  transition: color var(--short-duration);
-
-  @include u.breakpoint(large) {
-    font-size: u.rem(36);
+.landing .logo {
+  a {
+    @include u.d-flex();
   }
 
-  &:hover {
-    color: var(--secondary-theme-color);
+  img {
+    width: u.rem(120);
+    padding: u.rem(10) 0;
+
+    @include u.breakpoint(medium) {
+      padding: u.rem(18) 0;
+      width: u.rem(170);
+    }
   }
 }
 
