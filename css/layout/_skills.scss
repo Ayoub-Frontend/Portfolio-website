@@ -70,20 +70,16 @@
       margin-bottom: u.rem(10);
     }
     ul li {
-      font-weight: 500;
+      @include u.d-flex(flex-start, center);
+      gap: u.rem(10);
       font-size: u.rem(18);
-      margin: u.rem(10) 0 0 u.rem(20);
-      position: relative;
 
-      &::before {
-        content: "\f058";
-        position: absolute;
-        font-family: "Font Awesome 6 Free";
-        font-weight: bold;
-        left: u.rem(-25);
-        @include u.transform-center(0, 50%);
-        font-size: u.rem(18);
-        color: var(--secondary-theme-color);
+      .icon {
+        color: var(--primary-theme-color);
+      }
+
+      span {
+        font-weight: 500;
       }
     }
   }
