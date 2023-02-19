@@ -12,7 +12,7 @@
 8. LocalStorage in browser to save the choosen **Mode** and **Language**.
 9. ES6 standerds in **JavaScript** code.
 
-## Features
+## Features:
 
 1. Responsive design with flexable layout built with **flexbox** and **grid**.
 2. Minified CSS file (The Production Version).
