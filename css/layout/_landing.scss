@@ -333,6 +333,10 @@
       color: var(--primary-theme-color);
     }
 
+    &.ar {
+      -webkit-text-stroke: unset;
+    }
+
     @include u.breakpoint(small) {
       font-size: u.rem(40);
       -webkit-text-stroke: u.rem(1) var(--text-color-1);

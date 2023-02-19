@@ -107,8 +107,10 @@ function jobTitleFill(language) {
   let theJobTitle = document.querySelector(".job-title");
 
   if (language === "ar") {
+    theJobTitle.classList.add("ar");
     setTimeout(() => theJobTitle.classList.add("filled"), 1600);
   } else {
+    theJobTitle.classList.remove("ar");
     setTimeout(() => theJobTitle.classList.add("filled"), 1200);
   }
 }
@@ -202,6 +204,7 @@ languagesBtn.addEventListener("click", function (e) {
 
     // Retype the Autotype Text in Landing
     greetAutoTyping("ar");
+    jobTitleFill("ar");
     jobDescAutoTyping("ar");
   } else {
     e.target.setAttribute("data-lang", "en");
@@ -210,6 +213,7 @@ languagesBtn.addEventListener("click", function (e) {
 
     // Retype the Autotype Text in Landing
     greetAutoTyping("en");
+    jobTitleFill("en");
     jobDescAutoTyping("en");
   }
   disableBtn(e.target, 4200);
